@@ -1,7 +1,12 @@
 package com.bignerdranch.android.geoquiz;
 
-/**
- * Created by Henrik Samuelsson on 2016-05-05.
- */
 public class Question {
+
+    private int mTextResId;
+    private boolean mAnswerTrue;
+
+    public Question(int textResId, boolean answerTrue) {
+        mTextResId = textResId;
+        mAnswerTrue = answerTrue;
+    }
 }
