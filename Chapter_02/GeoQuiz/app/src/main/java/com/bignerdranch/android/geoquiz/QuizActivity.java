@@ -86,4 +86,18 @@ public class QuizActivity extends AppCompatActivity {
         int question = mQuestionBank[questionIndex].getTextResId();
         mQuestionTextView.setText(question);
     }
+
+    private void checkAnswer(boolean userPressedTrue) {
+        boolean answerIsTrue = mQuestionBank[mCurrentIndex].isAnswerTrue();
+
+        int messageResId = 0;
+
+        if(userPressedTrue == answerIsTrue) {
+            messageResId = R.string.correct_toast_text;
+        } else {
+            messageResId = R.string.incorrect_toast_text;
+        }
+
+        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT).show();
+    }
 }
