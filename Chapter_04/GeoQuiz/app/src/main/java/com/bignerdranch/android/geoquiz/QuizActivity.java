@@ -38,11 +38,11 @@ public class QuizActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
 
-        //mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
+        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         mQuestionTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
+                //mCurrentIndex = (mCurrentIndex + 1) % mQuestionBank.length;
                 displayQuestion(mCurrentIndex);
             }
         });
