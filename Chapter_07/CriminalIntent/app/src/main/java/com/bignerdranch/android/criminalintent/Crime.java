@@ -10,7 +10,7 @@ public class Crime {
 
     private UUID mId;
     private String mTitle;
-    private Date mDate;
+
     private boolean mSolved;
 
     public Crime() {
@@ -29,5 +29,15 @@ public class Crime {
 
     public String getTitle() {
         return mTitle;
+    }
+
+    public Date getDate() {
+        return mDate;
+    }
+
+    private Date mDate;
+
+    public void setSolved(boolean solved) {
+        mSolved = solved;
     }
 }
